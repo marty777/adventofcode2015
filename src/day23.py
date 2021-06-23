@@ -62,7 +62,7 @@ class Processor:
             else:
                 self.index += 1
         else:
-            print("Instruction errror", instruction)
+            print("Instruction error", instruction)
             return True
         
         self.count += 1
@@ -88,5 +88,3 @@ def day23(infile):
     part2 = processor.b
     print("Part 1: %d" % (part1))
     print("Part 2: %d" % (part2))
-    
-    

@@ -67,7 +67,6 @@ def battle(boss, player, weapons, armors, rings):
                 return False
                 break
         step += 1
-    print("Got here")
     return player_win
             
 def day21(infile):
@@ -133,5 +132,3 @@ def day21(infile):
     
     print("Part 1: %d" % (part1))
     print("Part 2: %d" % (part2))
-    
-    

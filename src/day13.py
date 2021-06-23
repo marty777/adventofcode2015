@@ -2,8 +2,6 @@
 
 def eval(happiness, choices):
     keys = list(happiness.keys())
-    #print(keys, choices)
-    #print(happiness)
     change = 0
     for i in range(0, len(choices)):
         neighbor_low = i - 1
@@ -12,7 +10,6 @@ def eval(happiness, choices):
             neighbor_low = len(choices) - 1
         if neighbor_high >= len(choices):
             neighbor_high = 0
-        #print(i, neighbor_low, neighbor_high, choices[i], choices[neighbor_low], choices[neighbor_high], keys[choices[i]], keys[choices[neighbor_low]], keys[choices[neighbor_high]])
         change += happiness[keys[choices[i]]][keys[choices[neighbor_low]]]
         change += happiness[keys[choices[i]]][keys[choices[neighbor_high]]]
     return change
@@ -65,5 +62,4 @@ def day13(infile):
         happiness[key]["Me"] = 0
         happiness["Me"][key] = 0
     part2 = recurse(happiness, [])
-    
     print("Part 2: %s" % (part2))

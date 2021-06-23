@@ -59,7 +59,6 @@ def day16(infile):
         "cars": 2,
         "perfumes": 1}
     print(analysis)
-    #print(sues)
     part1 = sue_find(sues, analysis)
     part2 = sue_find2(sues, analysis)
     print("Part 1: %d" % (part1))

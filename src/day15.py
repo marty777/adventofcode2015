@@ -3,8 +3,6 @@
 # i suspect there's a faster way to find the maximum of a system of linear equations, but this is sufficient
 def score(ingredients, amounts, test_calories = False):
     subtotals = {}
-    #print(ingredients)
-    #print(amounts)
     if test_calories:
         calories = 0
         for name in amounts:
@@ -25,8 +23,6 @@ def score(ingredients, amounts, test_calories = False):
     product = 1
     for name in subtotals:
         product *= subtotals[name]
-    #print(subtotals)
-    #print(product)
     return product
 
 def choose(ingredients, amounts, test_calories = False):
